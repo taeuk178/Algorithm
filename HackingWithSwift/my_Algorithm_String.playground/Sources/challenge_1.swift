@@ -1,5 +1,6 @@
 import Foundation
 
+// 문자 중복
 public class challenge_1{
     public init(){}
     
