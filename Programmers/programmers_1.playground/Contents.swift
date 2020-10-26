@@ -9,7 +9,9 @@ func solution(_ numbers: [Int]) -> [Int]{
 
 print(solution([1,5,3]))
 
-let level1 = level_1()
-level1.solution(10)
-level1.solution("pYy")
 
+let level1 = level_1()
+
+level1.solution1(10)
+level1.solution2("pYy")
+level1.solution3("-123")

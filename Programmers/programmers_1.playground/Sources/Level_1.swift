@@ -3,7 +3,7 @@ import Foundation
 public class level_1{
     public init(){}
     
-    public func solution(_ n: Int) -> Int{
+    public func solution1(_ n: Int) -> Int{
         var count = 0
         if n == 0{
             return count
@@ -17,7 +17,7 @@ public class level_1{
         return count
     }
     //문자열 내 p와 y의 개수
-    public func solution(_ s: String) -> Bool{
+    public func solution2(_ s: String) -> Bool{
         // components, filter.count 가능
         var Pcounts = 0
         var Ycounts = 0
@@ -34,6 +34,11 @@ public class level_1{
         }
         return ans
     }
-    
+    //문자열 정수로 바꾸기
+    public func solution3(_ s: String) -> Int{
+        let tt = Int(s)!
+        
+        return tt
+    }
 }
 
