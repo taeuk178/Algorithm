@@ -40,5 +40,24 @@ public class level_1{
         
         return tt
     }
+    // 문자열 다루기
+    public func solution4(_ s: String) -> Bool{
+
+        
+    //    if s.count == 4 || s.count == 6{
+    //        if s.range(of: "[a-zA-Z]", options: .regularExpression) != nil{
+    //            return false
+    //        }else{
+    //            return true
+    //        }
+    //    }
+        if s.count == 4 || s.count == 6{
+            let num = s.filter{$0.isNumber}
+            if s.count == num.count{
+                return true
+            }
+        }
+        return false
+    }
 }
 
