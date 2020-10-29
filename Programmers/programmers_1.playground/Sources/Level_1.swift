@@ -75,5 +75,17 @@ public class level_1{
         }
         return count
     }
+    public func solution6(_ seoul: [String]) -> String{
+        var count = 0
+        for i in seoul{
+            if i == "Kim"{
+                return "김서방은 \(count)에 있다"
+            }
+            count = count + 1
+        }
+        return ""
+        // 참고) index 씀
+    //    return "김서방은 \(seoul.index(of: "Kim")!)에 있다"
+    }
 }
 
