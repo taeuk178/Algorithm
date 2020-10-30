@@ -87,5 +87,21 @@ public class level_1{
         // 참고) index 씀
     //    return "김서방은 \(seoul.index(of: "Kim")!)에 있다"
     }
+    // 수박수
+    public func solution7(_ n: Int) -> String{
+        var tt = ""
+        if n > 0{
+            for i in 0...n - 1{
+                if i % 2 == 0{
+                    tt.append("수")
+                }else{
+                    tt.append("박")
+                }
+            }
+        }else{
+            return ""
+        }
+        return tt
+    }
 }
 
