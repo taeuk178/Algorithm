@@ -103,5 +103,13 @@ public class level_1{
         }
         return tt
     }
+    public func solution8(_ x: Int, _ n: Int)-> [Int64]{
+        var counts = [Int64]()
+        for i in 1...n{
+            
+            counts.append(Int64(x * i))
+        }
+        return counts
+    }
 }
 
