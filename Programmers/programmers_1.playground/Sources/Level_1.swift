@@ -111,5 +111,8 @@ public class level_1{
         }
         return counts
     }
+    public func solution9(_ s: String) -> String{
+        return String(s.sorted(){$0 > $1})
+    }
 }
 
