@@ -114,5 +114,20 @@ public class level_1{
     public func solution9(_ s: String) -> String{
         return String(s.sorted(){$0 > $1})
     }
+    public func solution10(_ arr: [Int], _ divisor: Int) -> [Int]{
+        // map, filter
+        var arrays = [Int]()
+        for i in 0..<arr.count{
+            if arr[i] % divisor == 0{
+                arrays.append(arr[i])
+            }
+        }
+        if arrays.count > 0{
+            arrays.sort(by: <)
+            return arrays
+        }else{
+            return [-1]
+        }
+    }
 }
 
