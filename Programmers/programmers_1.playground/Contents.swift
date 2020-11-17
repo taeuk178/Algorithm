@@ -81,6 +81,8 @@ level1.solution8(2, 5)
 level1.solution9("Zbcdefg")
 level1.solution10([2,5,7,10], 5)
 level1.solution11("ab", 1)
+level1.solution12([3,4,5])
+
 
 let level2 = Level_2()
 

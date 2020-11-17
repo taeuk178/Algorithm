@@ -153,5 +153,10 @@ public class level_1{
         }
         return answer
     }
+    public func solution12(_ arr: [Int]) -> [Int]{
+        var tt = arr
+        tt.remove(at: tt.index(of: tt.min()!)!)
+        return tt.isEmpty ? [-1] : tt
+    }
 }
 
