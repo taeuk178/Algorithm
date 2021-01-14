@@ -65,8 +65,20 @@ func tailfactorial(_ n: Int) -> Int {
     
     return fibonacci[n]
 }
-print(tailfactorial(2))
+//print(tailfactorial(2))
 
+func solutions(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
+    
+    let arr1Array = arr1.map{ (String(repeating: "0", count: n - String($0, radix: 2).count) + String($0, radix: 2))}
+    let arr2Array = arr2.map{ (String(repeating: "0", count: n - String($0, radix: 2).count) + String($0, radix: 2))}
+    print(arr1Array)
+    return zip(arr1Array, arr2Array).map{ String(zip($0, $1).map{($0 == "1" || $1 == "1") ? "#" : " "})}
+}
+//print(solutions(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28]))
+
+let sort = Sort()
+
+sort.selectionSort()
 
 let level1 = level_1()
 
@@ -87,3 +99,5 @@ level1.solution12([3,4,5])
 let level2 = Level_2()
 
 level2.solution1(5)
+
+
