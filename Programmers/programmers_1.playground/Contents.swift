@@ -77,8 +77,12 @@ func solutions(_ n:Int, _ arr1:[Int], _ arr2:[Int]) -> [String] {
 //print(solutions(5, [9, 20, 28, 18, 11], [30, 1, 21, 17, 28]))
 
 let sort = Sort()
-
-sort.selectionSort()
+var arrays = [1,5,6,4,2]
+//sort.selectionSort()
+//sort.bubbleSort()
+//sort.insertionSort(array: arrays)
+//sort.heapSort(&arrays)
+sort.split(data: arrays)
 
 let level1 = level_1()
 
