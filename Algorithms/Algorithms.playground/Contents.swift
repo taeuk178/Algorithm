@@ -5,17 +5,11 @@ let grid = Grid()
 func physical(_ n: Int, _ lost: [Int], _ reserve: [Int]) -> Int{
     
     var count = 0
+    
     for i in 1...n{
-        
-        for j in lost{
-            print("i \(i)")
-            print("j \(j)")
-            if i != j{
-                
-                count += i
-//                print("Count: \(count)")
-            }
-        }
+        var tt = lost.filter{$0 == i}
+        print(tt)
+
         
     }
     return 0
