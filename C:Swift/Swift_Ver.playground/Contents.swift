@@ -27,8 +27,8 @@ func q11(_ a: Int) -> String{
 
 
 func q15(_ height: Int, _ width: Int) -> String{
-    for i in 1...height{
-        for j in 1...width{
+    for _ in 1...height{
+        for _ in 1...width{
             
             print("*", terminator: "")
         }
@@ -37,3 +37,5 @@ func q15(_ height: Int, _ width: Int) -> String{
     return ""
 }
 print(q15(3, 7))
+
+
