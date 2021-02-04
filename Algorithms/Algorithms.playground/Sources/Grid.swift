@@ -55,7 +55,7 @@ public class Grid{
         }
         return result
     }
-
+    // 설탕 배달
     public func gird2839() -> Int{
         var n = Int(readLine()!)!
         var result = 0
