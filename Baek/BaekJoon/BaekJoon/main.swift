@@ -7,19 +7,57 @@
 
 import Foundation
 
+func solution() -> Int{
+    let input = readLine() ?? ""
+    let n = Int(input) ?? 0
 
-let input = readLine() ?? ""
-let a = Int(input) ?? 0
+    var ropes = [Int]()
+    for _ in 0..<n{
+        ropes.append(Int(readLine()!)!)
+    }
+    ropes = ropes.sorted()
+        let strongestRope = ropes[n-1]
+        var result = 0
+        
+        for (index,weakestRope) in ropes.enumerated(){
+            if (weakestRope * (n-index)) > result {
+                result = (weakestRope * (n - index))
+            }
+        }
+        
+        if result > strongestRope{
+            return result
+        }
 
-let inputtwo = readLine() ?? ""
-let b = Int(inputtwo) ?? 0
+        return strongestRope
+}
+//print(solution())
+func grid14916() -> Int{
+    var n = Int(readLine()!)!
+    var count = 0
+    var o = n % 5
+    if n == 1 || n == 3{
+        count = -1
+    }else if o % 2 == 0{
+        count = n / 5 + o / 2
+    }else{
+        count = ((n / 5)-1) + ((o + 5)/2)
+    }
+    return count
+}
+print(grid14916())
 
-print(a*(b%10))
-print(a*(b%100-b%10)/10)
-print(a*(b/100))
-print(a*b)
-
-
+//lopes = lopes.sorted()
+//var tt = lopes.map{$0 * a}
+//var temp = 0
+//var count = 0
+//for i in tt[0..<tt.count]{
+//    temp = tt[0]
+//    if i < temp{
+//        temp = i
+//    }
+//}
+//print(temp)
 
 // star_1
 //for i in 1...a{
