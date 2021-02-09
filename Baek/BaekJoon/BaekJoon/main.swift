@@ -7,9 +7,7 @@
 
 import Foundation
 
-let input = String(readLine() ?? "")
-print(input.count)
-
+//let tt = input.filter{$0 == input.uppercased()}
 
 //lopes = lopes.sorted()
 //var tt = lopes.map{$0 * a}
