@@ -1,5 +1,35 @@
 import UIKit
 
+// so so
+func solution118372(_ n: Int64) -> Int64{
+    let strings = String(n)
+    var count: [Int] = []
+    var result = ""
+    for i in strings{
+        count.append(Int(String(i)) ?? 0)
+    }
+    count.sort(by: >)
+    // 여서 부터 이해 필요
+    _ = count.map{ result = result + "\($0)"}
+    
+    let tt = Int(result)
+    
+    return Int64(tt!)
+}
+
+print(solution118372(118372))
+/*
+ 문자열에도 sort가능
+ func solution(_ n:Int64) -> Int {
+     return Int(String(String(n).sorted(by: >)))!
+ }
+*/
+
+
+
+
+
+// ?? 뭔지 기억안남
 func solution(_ numbers: [Int]) -> [Int]{
     var list = [Int]()
     let tt = numbers.sorted()
@@ -21,32 +51,6 @@ func solution(_ numbers: [Int]) -> [Int]{
     return tt
 }
 
-//print(solution([2,1,3,4,1]))
-func solution11(_ s: String, _ n: Int) -> String{
-    var answer = String()
-    let alphabet = ["A":0,"B":1,"C":2,"D":3,"E":4,"F":5,"G":6,"H":7,"I":8,"J":9,"K":10,"L":11,"M":12,"N":13,"O":14,"P":15,"Q":16,"R":17,"S":18,"T":19,"U":20,"V":21,"W":22,"X":23,"Y":24,"Z":25]
-    let keys = alphabet.keys.sorted()
-    
-    for i in 0..<Array(s).count{
-        if Array(s)[i] == " "{
-            answer += " "
-            continue
-        }
-        var number = alphabet[String(Array(s)[i].uppercased())]! + n
-        if number > 25 {
-            number = number - 26
-        }
-        let value = keys[number]
-        let value1 = alphabet.index(forKey: value)
-        if Array(s)[i].isUppercase{
-            answer += alphabet.keys[value1!]
-        }else {
-            answer += alphabet.keys[value1!].lowercased()
-        }
-    }
-    return answer
-}
-print(solution11("ab", 1))
 
 
 

@@ -11,3 +11,12 @@ func string2902(){
     print(empty)
 }
 
+/*
+ 다른사람 고차함수 이용 풀이
+ 
+ let line = readLine() ?? ""
+ let result = line.split { $0 == "-" }.map { String($0.first!) }.reduce("", +)
+ 
+ print(result)
+ 
+ */
