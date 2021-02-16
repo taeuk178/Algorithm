@@ -7,6 +7,23 @@
 
 import Foundation
 
+let strings = String(readLine() ?? "")
+var count = 0
+
+for i in strings{
+    if i == "a"{
+        count += 1
+    }else if i == "e"{
+        count += 1
+    }else if i == "i"{
+        count += 1
+    }else if i == "o"{
+        count += 1
+    }else if i == "u"{
+        count += 1
+    }
+}
+print(count)
 //let tt = input.filter{$0 == input.uppercased()}
 
 //lopes = lopes.sorted()
