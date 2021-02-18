@@ -7,23 +7,35 @@
 
 import Foundation
 
-let strings = String(readLine() ?? "")
-var count = 0
+// grid 1439
+//let strings = String(readLine() ?? "")
+var input = readLine()!.map() {String($0)}
+var countZero: Int = 0
+var countOne: Int = 0
+var resultCount = 0
 
-for i in strings{
-    if i == "a"{
-        count += 1
-    }else if i == "e"{
-        count += 1
-    }else if i == "i"{
-        count += 1
-    }else if i == "o"{
-        count += 1
-    }else if i == "u"{
-        count += 1
+if input[0] == "0"{
+    countZero = 1
+}else{
+    countOne = 1
+}
+
+for i in 1 ... input.count - 1{
+    if input[i] != input[i - 1]{
+        if input[i] == "0"{
+            countZero += 1
+        }else{
+            countOne += 1
+        }
     }
 }
-print(count)
+
+if countZero >= countOne{
+    print(countOne)
+}else{
+    print(countZero)
+}
+
 //let tt = input.filter{$0 == input.uppercased()}
 
 //lopes = lopes.sorted()

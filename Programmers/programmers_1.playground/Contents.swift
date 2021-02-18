@@ -1,5 +1,12 @@
 import UIKit
 
+
+
+
+
+
+
+
 // so so
 func solution118372(_ n: Int64) -> Int64{
     let strings = String(n)
@@ -9,7 +16,6 @@ func solution118372(_ n: Int64) -> Int64{
         count.append(Int(String(i)) ?? 0)
     }
     count.sort(by: >)
-    // 여서 부터 이해 필요
     _ = count.map{ result = result + "\($0)"}
     
     let tt = Int(result)
@@ -17,7 +23,7 @@ func solution118372(_ n: Int64) -> Int64{
     return Int64(tt!)
 }
 
-print(solution118372(118372))
+//print(solution118372(118372))
 /*
  문자열에도 sort가능
  func solution(_ n:Int64) -> Int {
@@ -29,28 +35,27 @@ print(solution118372(118372))
 
 
 
-// ?? 뭔지 기억안남
-func solution(_ numbers: [Int]) -> [Int]{
-    var list = [Int]()
-    let tt = numbers.sorted()
-    for i in 0...tt.count - 1{
-        print("i == ", tt[i])
-        for j in i...tt.count - 1{
-            if i == tt.count - 1{
-                print("j = end")
-            }else{
-                if j + 1 > tt.count - 1{
-                    
-                }
-                print("j = ", tt[j + 1])
-            }
-            
+// 두개 뽑아서 더하기
+func solution(_ numbers:[Int]) -> [Int] {
+    
+    var sorted = numbers.sorted{$0 < $1}
+    var setNums = Set<Int>()
+    var answer = [Int]()
+    
+    for i in 0..<sorted.count-1 {
+        for j in i+1..<sorted.count {
+            setNums.insert(sorted[i] + sorted[j])
         }
     }
     
-    return tt
+    for num in setNums {
+        answer.append(num)
+    }
+    answer.sort()
+    
+    return answer
 }
-
+print(solution([2,1,3,4,1]))
 
 
 
