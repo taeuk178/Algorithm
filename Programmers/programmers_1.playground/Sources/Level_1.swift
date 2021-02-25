@@ -158,5 +158,56 @@ public class level_1{
         tt.remove(at: tt.index(of: tt.min()!)!)
         return tt.isEmpty ? [-1] : tt
     }
+    public func solutionID(_ new_id: String) -> String{
+        
+        var myID = ""
+        //1
+        myID = new_id.lowercased()
+        
+        var newId = ""
+        //2
+        for i in myID{
+            if i.isLetter || i.isNumber || i == "-" || i == "_" || i == "." {
+                newId.append(i)
+            }
+        }
+        //3차
+        while newId.contains("..") {
+            newId = newId.replacingOccurrences(of: "..", with: ".")
+        }
+
+        //4차
+        while newId.hasPrefix(".") {
+            newId.removeFirst()
+        }
+
+        while newId.hasSuffix(".") {
+            newId.removeLast()
+        }
+        
+        //5
+        if newId == ""{
+            newId.append("a")
+        }
+        
+        //6
+        if newId.count >= 16{
+            let index = newId.index(newId.startIndex, offsetBy: 15)
+            newId = String(newId[newId.startIndex..<index])
+            
+            while newId.hasSuffix(".") {
+                newId.removeLast()
+            }
+        }
+        
+        //7
+        if newId.count <= 2{
+            while newId.count != 3{
+                newId = newId + String(newId.last!)
+            }
+        }
+        
+        return newId
+    }
 }
 
