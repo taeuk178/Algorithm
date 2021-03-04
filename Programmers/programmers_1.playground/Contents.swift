@@ -4,8 +4,6 @@ import UIKit
 
 
 
-
-
 // so so
 func solution118372(_ n: Int64) -> Int64{
     let strings = String(n)

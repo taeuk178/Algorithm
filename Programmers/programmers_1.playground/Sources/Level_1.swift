@@ -230,7 +230,31 @@ public class level_1{
         return count
 //        String(n)을 초기값 0으로 설정 후 0 + Int(String(n))형식으로 더한다.
 //        return String(n).reduce(0, {$0 + Int(String($1))!})
-        
     }
+    
+    //콜라츠 추측
+    // 재귀로 풀거나 while로 품
+    func solution(_ num: Int) -> Int{
+        var count = 0
+        var number = num
+
+        if num == 1{
+            return count
+        }
+        while count < 500{
+            if number % 2 == 0{
+                number = number / 2
+                count += 1
+            }else{
+                number = number * 3 + 1
+                count += 1
+            }
+            if number == 1{
+                return count
+            }
+        }
+        return -1
+    }
+    
 }
 
