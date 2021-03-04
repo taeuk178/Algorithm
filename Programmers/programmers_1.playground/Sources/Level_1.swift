@@ -209,5 +209,28 @@ public class level_1{
         
         return newId
     }
+    
+    //내림차순 정렬
+    func descendingOrder(_ s: Int64) -> Int{
+        
+        return Int(String(String(s).sorted(by: >)))!
+    }
+    
+    //자릿수 더하기
+    func solutions(_ n: Int) -> Int{
+        
+        var count = 0
+        let ts = String(n)
+        
+        for i in ts{
+            count += Int(String(i))!
+        }
+
+        
+        return count
+//        String(n)을 초기값 0으로 설정 후 0 + Int(String(n))형식으로 더한다.
+//        return String(n).reduce(0, {$0 + Int(String($1))!})
+        
+    }
 }
 

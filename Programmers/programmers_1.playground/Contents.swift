@@ -1,10 +1,6 @@
 import UIKit
 
-func descendingOrder(_ s: Int64) -> Int{
-    
-    return Int(String(String(s).sorted(by: >)))!
-}
-print(descendingOrder(118372))
+
 
 
 
