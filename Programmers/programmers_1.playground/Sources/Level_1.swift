@@ -255,6 +255,15 @@ public class level_1{
         }
         return -1
     }
-    
+    //하샤드 수
+    func harshadNumber(_ x: Int) ->Bool{
+        
+        let num = String(x).reduce(0, {$0 + Int(String($1))!})
+        if x % num == 0{
+            return true
+        }else{
+            return false
+        }
+    }
 }
 
