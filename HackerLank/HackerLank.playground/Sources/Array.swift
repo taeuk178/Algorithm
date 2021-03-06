@@ -57,4 +57,17 @@ public class Array{
             print(x+str)
         }
     }
+    //minimum value , maximum value
+    public func miniMaxSum(arr: [Int]) -> Void {
+        let tt = arr.sorted(by: <)
+        var a = 0
+        var b = 0
+        for i in tt[0...3]{
+            a += i
+        }
+        for j in tt[1...4]{
+            b += j
+        }
+        print(a, b)
+    }
 }
