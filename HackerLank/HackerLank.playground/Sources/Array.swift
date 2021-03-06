@@ -48,4 +48,13 @@ public class Array{
         return abs(a - b)
 //        print(diagonalDifference(arr: [[11,2,4],[4,5,6],[10,8,-12]]))
     }
+    
+    public func staircase(n: Int) -> Void{
+        let space = Character(" ")
+        for i in 1...n {
+            let str = String(repeating: "#", count: i)
+            let x = String(repeating: space, count: n - i)
+            print(x+str)
+        }
+    }
 }
