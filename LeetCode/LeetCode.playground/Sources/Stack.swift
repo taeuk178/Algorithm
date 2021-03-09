@@ -112,3 +112,33 @@ class MyQueue {
         }
     }
 }
+
+class MyStack {
+
+    var arr: [Int] = []
+    /** Initialize your data structure here. */
+    init() {
+        
+    }
+    
+    /** Push element x onto stack. */
+    func push(_ x: Int) {
+        arr.append(x)
+    }
+    
+    /** Removes the element on top of the stack and returns that element. */
+    func pop() -> Int {
+        top()
+        return arr.removeLast()
+    }
+    
+    /** Get the top element. */
+    func top() -> Int {
+        return arr.last!
+    }
+    
+    /** Returns whether the stack is empty. */
+    func empty() -> Bool {
+        return arr.isEmpty ? true : false
+    }
+}
