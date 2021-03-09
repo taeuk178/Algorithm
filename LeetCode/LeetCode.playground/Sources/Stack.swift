@@ -72,3 +72,43 @@ class MinStack {
         return stackArr.min() ?? 0
     }
 }
+
+class MyQueue {
+    
+    /** Initialize your data structure here. */
+    private var pushStack: [Int]!
+    private var popStack: [Int]!
+    
+    init() {
+        pushStack = []
+        popStack = []
+    }
+    
+    /** Push element x to the back of queue. */
+    func push(_ x: Int) {
+        pushStack.append(x)
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    func pop() -> Int {
+        if popStack.isEmpty { moveItemsFromPushToPop() }
+        return popStack.isEmpty ? -1 : popStack.removeLast()
+    }
+    
+    /** Get the front element. */
+    func peek() -> Int {
+       if popStack.isEmpty { moveItemsFromPushToPop() }
+        return popStack.isEmpty ? -1 : popStack.last!
+    }
+    
+    /** Returns whether the queue is empty. */
+    func empty() -> Bool {
+        return popStack.isEmpty && pushStack.isEmpty
+    }
+    
+    func moveItemsFromPushToPop() {
+        while !pushStack.isEmpty {
+            popStack.append(pushStack.removeLast())
+        }
+    }
+}

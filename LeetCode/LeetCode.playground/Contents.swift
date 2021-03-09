@@ -1,5 +1,4 @@
-import UIKit
-
+import Foundation
 
 //func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
 //    var actualSearchNumber:Int;
@@ -14,3 +13,4 @@ import UIKit
 //    return [-1, -1];
 //}
 //print(twoSum([1,2,3], 3))
+
