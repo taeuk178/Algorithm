@@ -2,7 +2,23 @@ import UIKit
 
 
 
-
+////행렬 덧셈
+//func rowsSum(_ arr1: [[Int]], _ arr2: [[Int]]) -> [[Int]]{
+//    var topArr: [Int] = []
+//    var bottomArr: [Int] = []
+//    var returnArr: [[Int]] = [[]]
+//
+//    for i in 0..<arr1.count{
+//        topArr.append(arr1[i][i] + arr2[i][i])
+//        bottomArr.append(arr1[i][1 - i] + arr2[i][1 - i])
+//    }
+//    print(topArr)
+//    print(bottomArr)
+//    returnArr.append([topArr[0][0]])
+//    returnArr.append(topArr[1] + bottomArr[0])
+//    return returnArr
+//}
+//print(rowsSum([[1,2],[2,3]], [[3,4],[5,6]]))
 
 // so so
 func solution118372(_ n: Int64) -> Int64{

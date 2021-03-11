@@ -265,5 +265,33 @@ public class level_1{
             return false
         }
     }
+    //모의고사
+    func solutionss(_ answers:[Int]) -> [Int] {
+        let supojaOne = [1,2,3,4,5]
+        let supojaTwo = [2,1,2,3,2,4,2,5]
+        let supojaThree = [3,3,1,1,2,2,4,4,5,5]
+        
+        var countOne: [Int:Int] = [1:0]
+        var countTwo: [Int:Int] = [2:0]
+        var countThree: [Int:Int] = [3:0]
+        
+        var dic: [Int:Int] = [:]
+        
+        for i in 0..<answers.count{
+            if answers[i] == supojaOne[i % 5]{
+                dic[1] = (dic[1] ?? 0) + 1
+            }
+            if answers[i] == supojaTwo[i % 8]{
+                dic[2] = (dic[2] ?? 0) + 1
+            }
+            if answers[i] == supojaThree[i % 10]{
+                dic[3] = (dic[3] ?? 0) + 1
+            }
+        }
+        
+        let max = dic.values.max()
+        let result = dic.filter{$0.value == max }.keys.sorted()
+        return result
+    }
 }
 
